@@ -12,7 +12,9 @@ import { ProductListComponent } from './components/bookstore-app/product-list/pr
 import { ProductItemComponent } from './components/bookstore-app/product-list/product-item/product-item.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { BookService } from './components/bookstore-app/product-list/product-list.component.service';
+import { BookService } from './components/bookstore-app/product-list/service/product-list.component.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BookService } from './components/bookstore-app/product-list/product-lis
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

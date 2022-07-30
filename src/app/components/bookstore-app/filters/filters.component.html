@@ -1,24 +1,12 @@
-<div class="card">
-
-    <div class="card-header">Filtros</div>
-
-    <div class="card-body">
-        <form>
-            <div class="form-group">
-                <label for="de">De</label>
-                <input type="number" id="de" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label for="ate">Até</label>
-                <input type="number" id="ate" class="form-control">
-            </div>
-
-            <button class="btn btn-primary btn-block btn-sm">Filtrar</button>
-
-        </form>
-
-
+<div class="d-flex flex-column flex-md-row align-items-center p-3 mb-4">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1" style="background-color: #212529">
+        <fa-icon [icon]="faSearch" style="color: #515D66"></fa-icon>
+      </span>
     </div>
-
+    <input type="text" class="form-control" placeholder="Procurar por nome do livro" aria-label="Username"
+      aria-describedby="basic-addon1">
+    <button class="btn btn-primary my-2 my-sm-0" type="submit">Procurar</button>
+  </div>
 </div>

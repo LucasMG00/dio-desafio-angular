@@ -1,17 +1,17 @@
-<div class="card shadow-sm">
-
-    <img class="bd-placeholder-img card-img-top" width="100%" src='{{"assets/images/" + livro.img + ".png"}}'>
-
-    <div class="card-body">
-        <p class="card-text"> {{ livro.name }} </p>
-        <p class="card-text"> {{ livro.category }} </p>
-        <p class="card-text"> {{ livro.quantity }} </p>
-        <p class="card-text"> {{ livro.price | currency:'BRL' }} </p>
-    
-        <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-primary">Comprar</button>
-            <button type="button" class="btn btn-sm btn-outline">Detalhes</button>
-        </div>
-    </div>
-
+<img class="card-img-top" src='{{"assets/images/" + livro.img + ".png"}}'>
+<div class="card-body" style="background-color: #1A1E21">
+    <h5 class="card-title" style="background-color: #1A1E21">{{ livro.name }}</h5>
+</div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item bg-dark" style="color:white">{{ livro.category }}</li>
+    <li class="list-group-item bg-dark" style="color:white">{{ livro.quantity }}</li>
+    <li class="list-group-item bg-dark" style="color:yellow">{{ livro.price | currency:'BRL' }}</li>
+</ul>
+<div class="card-body btn-group" style="background-color: #1A1E21; min-width: 100%;">
+    <button type="button" class="btn btn-sm btn-success mx-2">
+        <fa-icon [icon]="faCartPlus" class="text-white"></fa-icon> Comprar
+    </button>
+    <button type="button" class="btn btn-sm btn-primary">
+        <fa-icon [icon]="faInfoCircle" class="text-white"></fa-icon> Detalhes
+    </button>
 </div>
