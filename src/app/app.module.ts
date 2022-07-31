@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookService } from './components/bookstore-app/product-list/service/product-list.component.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StarComponent } from './components/shared/stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BookstoreAppComponent,
     FiltersComponent,
     ProductListComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,
