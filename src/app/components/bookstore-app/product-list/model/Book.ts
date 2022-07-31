@@ -2,7 +2,7 @@ export class Book {
     id!: string;
     name!: string;
     price!:number;
-    quantity!: number;
+    rating!: number;
     category!:string;
     img!: string;
 }
