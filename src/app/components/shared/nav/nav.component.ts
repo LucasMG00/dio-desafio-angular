@@ -17,4 +17,37 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  checkboxCategory:any = [
+    {
+      id: 1,
+      type: "checkbox",
+      category: "Ação"
+    },
+    {
+      id: 2,
+      type: "checkbox",
+      category: "Aventura"
+    },
+    {
+      id: 3,
+      type: "checkbox",
+      category: "Terror"
+    },
+    {
+      id: 4,
+      type: "checkbox",
+      category: "Romance"
+    },
+    {
+      id: 5,
+      type: "checkbox",
+      category: "Comédia"
+    },
+    {
+      id: 6,
+      type: "checkbox",
+      category: "Mistério"
+    }
+  ]
+
 }

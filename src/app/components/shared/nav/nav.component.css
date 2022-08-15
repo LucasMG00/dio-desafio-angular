@@ -1,3 +1,21 @@
+.form-check-input {
+    background-color: #3e3644;
+}
+
+.form-check-input:hover {
+    border-color: #fff;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.form-switch:hover {
+    background-color: #212529;
+    border-radius: 5px;
+}
+
 @media (max-width: 767px) {
 
 #mobile {

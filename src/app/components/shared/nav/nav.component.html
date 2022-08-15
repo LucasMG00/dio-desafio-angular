@@ -9,13 +9,15 @@
         <div ngbDropdown class="dropdown mx-2">
             <button ngbDropdownToggle class="btn btn-outline dropdown-toggle text-white" type="button"
              data-bs-toggle="dropdown" aria-expanded="false">Categorias</button>
-            <ul ngbDropdownMenu class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Ação</a></li>
-              <li><a class="dropdown-item" href="#">Aventura</a></li>
-              <li><a class="dropdown-item" href="#">Terror</a></li>
-              <li><a class="dropdown-item" href="#">Romance</a></li>
-              <li><a class="dropdown-item" href="#">Comédia</a></li>
-              <li><a class="dropdown-item" href="#">Mistério</a></li>
+            <ul ngbDropdownMenu class="dropdown-menu" 
+            style="--bs-dropdown-border-color: #fff; --bs-dropdown-bg: #1a1e21; padding: 10px;">
+              <li *ngFor="let check of checkboxCategory" class="form-check form-switch"
+              style="margin-top: 5px">
+                <input type="{{check.type}}" class="form-check-input" id="{{check.id}}">
+                <label class="form-check-label" style="color: white" for="{{check.id}}">
+                  {{check.category}}
+                </label>
+              </li>
             </ul>
           </div>
 
