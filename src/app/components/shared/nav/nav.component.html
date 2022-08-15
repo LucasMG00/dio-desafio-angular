@@ -31,14 +31,23 @@
           </div>
     </nav>
 
-    <div ngbDropdown class="dropdown mx-5">
+    <div ngbDropdown class="dropdown mx-5" id="mobile">
         <button ngbDropdownToggle class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span style="font-weight: bold">Comprar</span> &nbsp;<fa-icon [icon]="faShoppingCart" class="text-white"></fa-icon>
         </button>
-        <ul ngbDropdownMenu class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">TODO list</a></li>
-          <li><a class="dropdown-item" href="#">TODO list</a></li>
-          <li><a class="dropdown-item" href="#">TODO list</a></li>
+        <ul ngbDropdownMenu class="dropdown-menu" style="--bs-dropdown-min-width: 20rem;">
+          <li class=" dropdown-item d-flex justify-content-between align-items-center">
+            Livro 1
+            <button type="button" class="btn btn-danger"><fa-icon [icon]="faTimes" class="text-white"></fa-icon></button>
+          </li>
+          <li class="dropdown-item d-flex justify-content-between align-items-center">
+            Livro 2
+            <button type="button" class="btn btn-danger"><fa-icon [icon]="faTimes" class="text-white"></fa-icon></button>
+          </li>
+          <li class="dropdown-item d-flex justify-content-between align-items-center">
+            Livro 3
+            <button type="button" class="btn btn-danger"><fa-icon [icon]="faTimes" class="text-white"></fa-icon></button>
+          </li>
         </ul>
       </div>
     
