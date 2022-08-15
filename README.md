@@ -1,4 +1,9 @@
-# Bookstore
+# Bookstore  
+`*` Ícones gerados por https://fortawesome.com;  
+`*` Imagens dos livros geradas por https://miblart.com;  
+`*` Qualquer semelhança com outra aplicação é coincidência; esse programa não foi criado com fins lucrativos.
+  
+## Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
