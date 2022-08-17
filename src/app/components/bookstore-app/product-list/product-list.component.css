@@ -1,0 +1,46 @@
+.form-check-input {
+    background-color: #3e3644;
+}
+
+.form-check-input:hover {
+    border-color: #fff;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0a58ca;
+}
+
+.form-switch:hover {
+    background-color: #212529;
+    border-radius: 5px;
+}
+
+#mobileContainer {
+    margin-bottom: 4px;
+}
+
+#mobile:nth-child(1) {
+    max-width: 70%; 
+    margin-left: 80px
+}
+#mobile:nth-child(2) {
+    margin-right: 80px
+}
+
+@media (max-width: 767px) {
+
+    #mobileContainer {
+        margin-bottom: 0px;
+    }
+
+    #mobile:nth-child(1) {
+        max-width: 100%;
+        margin-left: 0px;
+        margin-bottom: 10px
+    }
+    #mobile:nth-child(2) {
+        margin-right: 0px;
+    }
+
+}

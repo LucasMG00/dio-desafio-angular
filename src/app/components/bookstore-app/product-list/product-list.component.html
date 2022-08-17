@@ -1,5 +1,69 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 justify-content-center;" id="mobileContainer">
+
+    <div class="input-group justify-content-center" id="mobile">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"
+                style="background-color: #212529; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                <fa-icon [icon]="faSearch" style="color: #515D66"></fa-icon>
+            </span>
+        </div>
+        <input type="text" class="form-control" style="max-width: 100%" placeholder="Procurar por nome do livro"
+            aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <nav class="d-flex mt-2 mt-md-0 ms-md-auto" id="mobile">
+
+        <div ngbDropdown class="dropdown mx-2">
+            <button ngbDropdownToggle class="btn btn-secondary dropdown-toggle text-white" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"><span style="font-weight: bold">Categorias</span> &nbsp;
+                <fa-icon [icon]="faCog" class="text-white"></fa-icon>
+            </button>
+            <ul ngbDropdownMenu class="dropdown-menu"
+                style="--bs-dropdown-border-color: #fff; --bs-dropdown-bg: #1a1e21; padding: 10px;">
+                <li *ngFor="let check of checkboxCategory" class="form-check form-switch" style="margin-top: 5px">
+                    <input type="{{check.type}}" class="form-check-input" id="{{check.id}}" (change)="onChange($event)"
+                        value="{{check.category}}">
+                    <label class="form-check-label" style="color: white" for="{{check.id}}">
+                        {{check.category}}
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div ngbDropdown class="dropdown">
+            <button ngbDropdownToggle class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span style="font-weight: bold">Comprar</span> &nbsp;<fa-icon [icon]="faShoppingCart"
+                    class="text-white"></fa-icon>
+            </button>
+            <ul ngbDropdownMenu class="dropdown-menu" style="--bs-dropdown-min-width: 20rem;">
+                <li class=" dropdown-item d-flex justify-content-between align-items-center">
+                    Livro 1
+                    <button type="button" class="btn btn-danger">
+                        <fa-icon [icon]="faTimes" class="text-white"></fa-icon>
+                    </button>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between align-items-center">
+                    Livro 2
+                    <button type="button" class="btn btn-danger">
+                        <fa-icon [icon]="faTimes" class="text-white"></fa-icon>
+                    </button>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between align-items-center">
+                    Livro 3
+                    <button type="button" class="btn btn-danger">
+                        <fa-icon [icon]="faTimes" class="text-white"></fa-icon>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
 <section class="d-flex align-items-center justify-content-center flex-wrap" style="color:white">
-    <div class="card mx-2 my-2" style="width: 18rem;" *ngFor="let livro of livros">
+    <div class="card mx-2 my-2" style="width: 18rem;" *ngFor="let livro of produtoArray">
         <app-product-item [livro]="livro"></app-product-item>
     </div>
 </section>
