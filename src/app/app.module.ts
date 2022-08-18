@@ -13,7 +13,7 @@ import { StarComponent } from './components/shared/stars/stars.component';
 import { DetailsComponent } from './components/shared/details-popup/details-popup.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { BookService } from './components/bookstore-app/product-list/service/product-list.component.service';
+import { BookService } from './services/product.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialogModule } from '@angular/material/dialog';

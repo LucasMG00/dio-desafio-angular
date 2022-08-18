@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Book } from '../model/Book';
+import { Book } from '../../../../models/Book';
 import { faCartPlus, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { MatDialog } from '@angular/material/dialog';
 import { DetailsComponent } from 'src/app/components/shared/details-popup/details-popup.component';
