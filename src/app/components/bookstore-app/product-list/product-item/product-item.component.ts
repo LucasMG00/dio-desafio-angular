@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../model/Book';
 import { faCartPlus, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import { BookstoreAppComponent } from '../../bookstore-app.component';
-import { filter } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { DetailsComponent } from 'src/app/components/shared/details-popup/details-popup.component';
 
 @Component({
   selector: 'app-product-item',
@@ -14,13 +14,19 @@ export class ProductItemComponent implements OnInit {
 faCartPlus = faCartPlus
 faInfoCircle = faInfoCircle
 
-
   @Input()
   livro!: Book;
 
-  constructor(public bookStoreComp: BookstoreAppComponent) { }
+  constructor(private dialogRef : MatDialog) { }
 
-  ngOnInit(): void {
+  openDialog() {
+    this.dialogRef.open(DetailsComponent,{
+      data : {
+        title: this.livro.name
+      }
+    })
   }
+
+  ngOnInit(): void { }
 
 }

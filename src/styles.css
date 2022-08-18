@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~font-awesome/css/font-awesome.min.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container {
+    padding: 30px !important;
+    border-radius: 6px !important;
+    border: 1px solid white;
+    background-color: #1a1e21;
+    color: #fff;
+}
+
+.mat-dialog-actions {
+    float: right
+}
+
+.mat-typography {
+    font: 400 1rem/1.5 Roboto, "Helvetica Neue", sans-serif !important
+}

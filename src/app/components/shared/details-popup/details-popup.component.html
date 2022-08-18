@@ -1,0 +1,15 @@
+<h1 class="mat-box" mat-dialog-title>
+    <span style="margin-left:10px"><fa-icon [icon]="faBook" class="text-white"></fa-icon> {{title}}</span>
+</h1>
+
+<mat-dialog-content class="mat-typography">
+    <div class="mat-box">
+        <p>This dialog showcases the title, close, content and actions elements.</p>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close (click)="onClose()" class="btn btn-danger" style="margin-top: 10px">
+        <fa-icon [icon]="faTimes" class="text-white"></fa-icon> Fechar
+    </button>
+</mat-dialog-actions>

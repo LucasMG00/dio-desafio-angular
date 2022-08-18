@@ -1,6 +1,7 @@
 <img class="card-img-top" style="height:400px" src='{{"assets/images/" + livro.img + ".png"}}'>
 <div class="card-body" style="background-color: #1A1E21">
-    <h5 class="card-title" style="background-color: #1A1E21">{{ livro.name }}</h5>
+    <h5 style="background-color: #1A1E21;font-size: 1.25rem; margin:0"
+    class="card-title">{{ livro.name }}</h5>
 </div>
 <ul class="list-group list-group-flush">
     <li class="list-group-item bg-dark" style="color:white">{{ livro.category }}</li>
@@ -11,7 +12,7 @@
     <button type="button" class="btn btn-sm btn-success mx-2">
         <fa-icon [icon]="faCartPlus" class="text-white"></fa-icon> Comprar
     </button>
-    <button type="button" class="btn btn-sm btn-primary">
+    <button type="button" class="btn btn-sm btn-primary" (click)="openDialog()">
         <fa-icon [icon]="faInfoCircle" class="text-white"></fa-icon> Detalhes
     </button>
 </div>
