@@ -22,7 +22,8 @@ faInfoCircle = faInfoCircle
   openDialog() {
     this.dialogRef.open(DetailsComponent,{
       data : {
-        title: this.livro.name
+        title: this.livro.name,
+        details: this.livro.details
       }
     })
   }

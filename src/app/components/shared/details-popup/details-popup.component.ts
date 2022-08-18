@@ -13,8 +13,10 @@ export class DetailsComponent implements OnInit {
   faBook = faBook
 
   title: any
+  details: any
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef : MatDialog) {
     this.title = data.title
+    this.details = data.details
   }
 
   ngOnInit(): void { }

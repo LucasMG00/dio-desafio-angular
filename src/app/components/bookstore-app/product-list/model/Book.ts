@@ -5,4 +5,5 @@ export class Book {
     rating!: number;
     category!:string;
     img!: string;
+    details!: string;
 }
