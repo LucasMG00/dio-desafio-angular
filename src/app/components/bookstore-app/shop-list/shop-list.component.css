@@ -1,0 +1,12 @@
+.shop-box {
+    padding: 1rem; 
+    --bs-dropdown-min-width: 20rem; 
+    --bs-dropdown-border-color: #fff; 
+    --bs-dropdown-bg: #1a1e21;
+}
+
+.shop-manage {
+    --bs-dropdown-link-hover-bg: none;
+    --bs-dropdown-link-active-bg: none;
+    cursor: default;
+}

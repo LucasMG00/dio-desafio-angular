@@ -10,14 +10,19 @@ import { BookstoreAppComponent } from './components/bookstore-app/bookstore-app.
 import { ProductListComponent } from './components/bookstore-app/product-list/product-list.component';
 import { ProductItemComponent } from './components/bookstore-app/product-list/product-item/product-item.component';
 import { StarComponent } from './components/shared/stars/stars.component';
-import { DetailsComponent } from './components/shared/details-popup/details-popup.component';
+import { DetailsComponent } from './components/shared/popup/details-popup/details-popup.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BookService } from './services/product.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialogModule } from '@angular/material/dialog';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShopListComponent } from './components/bookstore-app/shop-list/shop-list.component';
+import { ShopItemComponent } from './components/bookstore-app/shop-list/shop-item/shop-item.component';
+import { ToastsComponent } from './components/shared/toasts/toasts.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     ProductListComponent,
     ProductItemComponent,
     StarComponent,
-    DetailsComponent
+    DetailsComponent,
+    ShopListComponent,
+    ShopItemComponent,
+    ToastsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     FontAwesomeModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

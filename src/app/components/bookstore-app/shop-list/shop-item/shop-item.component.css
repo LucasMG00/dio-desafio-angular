@@ -1,0 +1,20 @@
+.box-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70px;
+}
+
+.boxa {
+    flex: 0 0 100%;
+}
+
+.boxc {
+    order: 2;
+}
+
+.boxb, .boxc {
+    margin-left: 20px;
+    flex: 0 0 50%;
+    height: 50%;
+}

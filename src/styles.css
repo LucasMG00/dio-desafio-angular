@@ -19,3 +19,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-typography {
     font: 400 1rem/1.5 Roboto, "Helvetica Neue", sans-serif !important
 }
+
+.btn-bg-swap-grey {
+    background-color: #212529;
+}
+.btn-bg-swap-grey:hover {
+    background-color: #6c757d;
+}
+
+.btn-bg-swap-green {
+    background-color: #212529;
+}
+.btn-bg-swap-green:hover {
+    background-color: #198754;
+}

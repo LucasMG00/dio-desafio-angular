@@ -13,14 +13,13 @@
 
     <nav class="d-flex mt-2 mt-md-0 ms-md-auto" id="mobile">
 
-        <div ngbDropdown class="dropdown mx-2">
-            <button ngbDropdownToggle class="btn btn-secondary dropdown-toggle text-white" type="button"
+        <div ngbDropdown class="dropdown mx-2" autoClose="outside">
+            <button ngbDropdownToggle class="btn btn-outline-secondary btn-bg-swap-grey dropdown-toggle" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"><span style="font-weight: bold">Categorias</span>&nbsp;
                 <fa-icon [icon]="faCog" class="text-white"></fa-icon>
             </button>
-            <ul ngbDropdownMenu class="dropdown-menu"
-                style="--bs-dropdown-border-color: #fff; --bs-dropdown-bg: #1a1e21; padding: 10px;">
-                <li *ngFor="let check of checkboxCategory" class="form-check form-switch" style="margin-top: 5px">
+            <ul ngbDropdownMenu class="dropdown-menu category-item">
+                <li *ngFor="let check of checkboxCategory" class="form-check form-switch">
                     <input type="{{check.type}}" class="form-check-input" id="{{check.id}}" (change)="onChange($event)"
                         value="{{check.category}}">
                     <label class="form-check-label" style="color: white" for="{{check.id}}">
@@ -30,33 +29,8 @@
             </ul>
         </div>
 
-        <div ngbDropdown class="dropdown">
-            <button ngbDropdownToggle class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <span style="font-weight: bold">Comprar</span> &nbsp;<fa-icon [icon]="faShoppingCart"
-                    class="text-white"></fa-icon>
-            </button>
-            <ul ngbDropdownMenu class="dropdown-menu" style="--bs-dropdown-min-width: 20rem;">
-                <li class=" dropdown-item d-flex justify-content-between align-items-center">
-                    Livro 1
-                    <button type="button" class="btn btn-danger">
-                        <fa-icon [icon]="faTimes" class="text-white"></fa-icon>
-                    </button>
-                </li>
-                <li class="dropdown-item d-flex justify-content-between align-items-center">
-                    Livro 2
-                    <button type="button" class="btn btn-danger">
-                        <fa-icon [icon]="faTimes" class="text-white"></fa-icon>
-                    </button>
-                </li>
-                <li class="dropdown-item d-flex justify-content-between align-items-center">
-                    Livro 3
-                    <button type="button" class="btn btn-danger">
-                        <fa-icon [icon]="faTimes" class="text-white"></fa-icon>
-                    </button>
-                </li>
-            </ul>
-        </div>
+        <app-shop-list></app-shop-list>
+        
     </nav>
 </div>
 

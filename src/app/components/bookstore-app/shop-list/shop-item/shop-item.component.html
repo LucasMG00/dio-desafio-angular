@@ -1,0 +1,14 @@
+<div class="box-wrapper">
+    <div>
+        <img src='{{"assets/images/" + shopItem.itemImg + ".png"}}' style="height: 70px;width: 50px" class="boxa">
+    </div>
+
+    <div class="boxb">
+        <h2>{{ shopItem.itemName }}</h2>
+    </div>
+
+    <div class="boxc" style="color: yellow;">
+        <h3>{{ (shopItem.qty * shopItem.itemPrice) | currency:'BRL' }} 
+            <span style="color: rgb(189, 148, 16)">({{ shopItem.itemPrice | currency:'BRL' }} x{{shopItem.qty}})</span></h3>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div ngbDropdown class="dropdown" autoClose="outside">
+    <button ngbDropdownToggle class="btn btn-outline-success btn-bg-swap-green dropdown-toggle" type="button"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <span style="font-weight: bold">Carrinho</span> &nbsp;<fa-icon [icon]="faShoppingCart" class="text-white">
+        </fa-icon>
+    </button>
+    <div ngbDropdownMenu *ngIf="shopItems.length === 0" class="dropdown-menu shop-box">
+        <div class="alert-heading"></div>
+        <hr style="color:#fff">
+        <p class="alert alert-info" style="padding:10px;cursor:default">
+            Nenhum item adicionado.</p>
+    </div>
+    <ul ngbDropdownMenu *ngIf="shopItems.length > 0" class="dropdown-menu shop-box">
+
+        <span class="dropdown-item d-flex justify-content-between align-items-center shop-manage"
+            style="padding:0 10px">
+            <span id="placeholder"></span>
+            <span placement="start" ngbTooltip="Deletar todos os items" [closeDelay]="500">
+                <button mat-icon-button color="warn" (click)="removeAll()">
+                    <mat-icon>delete_forever</mat-icon>
+                </button>
+            </span>
+        </span>
+        <hr style="color:#fff">
+
+        <li *ngFor="let item of shopItems" class="dropdown-item d-flex align-items-center shop-manage">
+            <app-shop-item [shopItem]="item" style="color:#fff"></app-shop-item>
+        </li>
+
+        <hr style="color:#fff">
+        <span class="shop-manage">
+            <li class="dropdown-item d-flex justify-content-between align-items-center">
+                <h2 style="color:#fff;margin:0">Total: </h2>
+                <h2 style="color:yellow;margin:0">{{ shopTotal | currency:'BRL' }}</h2>
+            </li>
+        </span>
+
+        <div class="d-flex">
+            <button class="btn btn-success" style="min-width:100%; margin-top:10px">
+                Confirmar Compra
+            </button>
+        </div>
+    </ul>
+</div>
